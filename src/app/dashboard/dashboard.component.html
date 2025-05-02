@@ -1,14 +1,25 @@
 <app-navbar></app-navbar>
 
-<div style="padding: 20px;">
-  <h2>{{ summary?.title }}</h2>
-  <p>{{ summary?.content }}</p>
-  <p><strong>Source:</strong> <a [href]="summary?.source" target="_blank">{{ summary?.source }}</a></p>
+<main class="dashboard-container" role="main" aria-label="Dashboard Content">
+  <section class="dashboard-card" aria-labelledby="summary-title">
+    <h2 id="summary-title" class="dashboard-title">{{ summary?.title }}</h2>
+    <p class="dashboard-content">{{ summary?.content }}</p>
+    <p class="dashboard-source">
+      <strong>Source:</strong>
+      <a [href]="summary?.source" target="_blank" rel="noopener noreferrer">
+        {{ summary?.source }}
+      </a>
+    </p>
+  </section>
 
-  <hr />
+  <div class="dashboard-divider" role="separator" aria-hidden="true"></div>
 
-  <h3>Technical Summary</h3>
-  <p>
-    This application is built using Angular for the frontend, Node.js with MySQL for the backend, and Chart.js for dynamic data visualizations. JWT is used for authentication. The app is hosted on a single server using NGINX to serve the Angular app on port 80 and proxy backend API calls to port 3000.
-  </p>
-</div>
+  <section class="dashboard-tech" aria-labelledby="tech-title">
+    <h3 id="tech-title" class="tech-title">Technical Summary</h3>
+    <p class="tech-description">
+      This application is built using <strong>Angular</strong> for the frontend,
+      <strong>Node.js</strong> with <strong>MySQL</strong> for the backend,
+      and <strong>Chart.js</strong> for dynamic data visualizations...
+    </p>
+  </section>
+</main>
