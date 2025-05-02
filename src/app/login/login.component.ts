@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';          // ✅ Add this
 import { CommonModule } from '@angular/common';        // ✅ Add this too
-import { environment } from '../../environment';       // ✅ Already fixed this
+import { environment } from '../../../environments/environment';       // ✅ Already fixed this
 
 @Component({
   selector: 'app-login',

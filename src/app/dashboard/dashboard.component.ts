@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
-import { environment } from '../../environment'; // note: one dot, because file is in /src
+import { environment } from '../../../environments/environment'; // note: one dot, because file is in /src
 
 
 @Component({

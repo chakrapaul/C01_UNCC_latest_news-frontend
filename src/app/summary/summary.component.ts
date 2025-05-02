@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import Chart from 'chart.js/auto';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { environment } from '../../environment';
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-summary',
   standalone: true,
