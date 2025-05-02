@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div style="padding: 20px;">
+  <h2>{{ summary?.title }}</h2>
+  <p>{{ summary?.content }}</p>
+  <p><strong>Source:</strong> <a [href]="summary?.source" target="_blank">{{ summary?.source }}</a></p>
+
+  <hr />
+
+  <h3>Technical Summary</h3>
+  <p>
+    This application is built using Angular for the frontend, Node.js with MySQL for the backend, and Chart.js for dynamic data visualizations. JWT is used for authentication. The app is hosted on a single server using NGINX to serve the Angular app on port 80 and proxy backend API calls to port 3000.
+  </p>
+</div>
