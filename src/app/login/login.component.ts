@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http'; // Added HttpHeaders import
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,11 @@ export class LoginComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   onLogin() {
+    // Create headers object
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
     this.http.post<any>(
       `${environment.apiUrl}/login`,
       {
@@ -27,7 +32,8 @@ export class LoginComponent {
         pass: this.password
       },
       {
-        withCredentials: true  // ✅ Enables cookie/token handling for CORS
+        withCredentials: true,  // ✅ Enables cookie/token handling for CORS
+        headers: headers       // ✅ Added headers configuration
       }
     ).subscribe({
       next: (res) => {
@@ -36,6 +42,7 @@ export class LoginComponent {
       },
       error: (err) => {
         this.loginStatus = err.error.message || 'Login failed';
+        console.error('Login error:', err); // Added error logging
       }
     });
   }
