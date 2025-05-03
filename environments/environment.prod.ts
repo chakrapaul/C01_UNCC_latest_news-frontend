@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://uncc-latest-news-backend.onrender.com'
+  apiUrl: 'https://c01-backend.onrender.com'
 };
