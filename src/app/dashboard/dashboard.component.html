@@ -3,7 +3,7 @@
 <div class="dashboard-container">
   <div class="dashboard-card">
     <h2 class="dashboard-title">{{ summary?.title }}</h2>
-    <p class="dashboard-content">{{ summary?.content }}</p>
+    <div class="dashboard-content" [innerHTML]="summary?.content"></div>
     <p class="dashboard-source">
       <strong>Source:</strong>
       <a [href]="summary?.source" target="_blank">{{ summary?.source }}</a>
@@ -15,8 +15,10 @@
   <div class="dashboard-tech">
     <h3 class="tech-title">Technical Summary</h3>
     <p class="tech-description">
-      This application is built using <strong>Angular</strong> for the frontend, <strong>Node.js</strong> with <strong>MySQL</strong> for the backend,
-      and <strong>Chart.js</strong> for dynamic data visualizations. <strong>JWT</strong> is used for authentication. The app is hosted on a single server using
+      This application is built using <strong>Angular</strong> for the frontend,
+      <strong>Node.js</strong> with <strong>MySQL</strong> for the backend,
+      and <strong>Chart.js</strong> for dynamic data visualizations.
+      <strong>JWT</strong> is used for authentication. The app is hosted on a single server using
       <strong>NGINX</strong> to serve the Angular app on port 80 and proxy backend API calls to port 3000.
     </p>
   </div>
